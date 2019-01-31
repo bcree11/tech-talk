@@ -12,7 +12,7 @@ import Home from './pages/Home'
 import MediaQ from './pages/MediaQ'
 import Flex from './pages/Flex'
 import Grid from './pages/Grid'
-import Bootstrap from './pages/Bootstrap'
+import Background from './pages/Background'
 
 class App extends Component {
   render() {
@@ -20,13 +20,13 @@ class App extends Component {
       <Router>
         <div className="App">
           <nav>
-            <Link to='/'>Home</Link> | <Link to='/mediaquery'>Media Query</Link> | <Link to='/flex'>Flex</Link> | <Link to='/grid'>Grid</Link>
+            <Link to='/'>Home</Link> | <Link to='/mediaquery'>Media Query</Link> | <Link to='/flex'>Flex</Link> | <Link to='/grid'>Grid</Link> | <Link to='/background'>Background</Link>
           </nav>
           <Route path='/' exact component={Home}/>
           <Route path='/mediaquery' exact component={MediaQ}/>
           <Route path='/flex' exact component={Flex}/>
           <Route path='/grid' exact component={Grid}/>
-          <Route path='/bootstrap' exact component={Bootstrap}/>
+          <Route path='/background' exact component={Background}/>
         </div>
       </Router>
     );

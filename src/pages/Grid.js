@@ -35,3 +35,8 @@ export default class Grid extends Component {
     )
   }
 }
+
+// <div className="twoColumnGrid">
+// <div className="gridBox"></div>
+// <div className="gridBox"></div>
+// </div>
