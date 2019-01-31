@@ -1,26 +1,34 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+
+import { Button } from 'reactstrap'
+import './App.css'
+
+import Home from './pages/Home'
+import MediaQ from './pages/MediaQ'
+import Flex from './pages/Flex'
+import Grid from './pages/Grid'
+import Bootstrap from './pages/Bootstrap'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <nav>
+            <Link to='/'>Home</Link> | <Link to='/mediaquery'>Media Query</Link> | <Link to='/flex'>Flex</Link> | <Link to='/grid'>Grid</Link>
+          </nav>
+          <Route path='/' exact component={Home}/>
+          <Route path='/mediaquery' exact component={MediaQ}/>
+          <Route path='/flex' exact component={Flex}/>
+          <Route path='/grid' exact component={Grid}/>
+          <Route path='/bootstrap' exact component={Bootstrap}/>
+        </div>
+      </Router>
     );
   }
 }
